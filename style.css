@@ -1,21 +1,31 @@
-/* Create variables here at the top for the repeating css properties */
+/* Makeapplication/website images larger when hovering */
 
+:root {
+    --main-bg-color:#32353D;
+    --main-text-color: #91CBCC;
+    --secondary-text-color: white;
+}
+
+/* universal selector applying style to every element in this css file */
 * {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* element selector applying style to the body */
 body {
-    background-color: #32353D;
+    background-color: var(--main-bg-color);
 }
 
+/* element selector applying style to the header */
 header {
     height: 70px;
-    background-color: #32353D;
+    background-color: var(--main-bg-color);
     position: relative;
 }
 
+/* class selecot styleing the headder section */
 header div {
     /* background-color: blue; */
     position: relative;
@@ -25,15 +35,18 @@ header div {
     
 }
 
+
+/* type selector applying style to the h1 */
 header h1 {
     display: inline-block;
     padding-left: 50px;
     padding-right: 10px;
     cursor: pointer;
-    background-color: #91CBCC;
-    color: #32353D;
+    background-color: var(--main-text-color);
+    color: var(--main-bg-color);
 }
 
+/* type selector applying style to the ul in the header section */
 header ul {
     display: flex;
     list-style: none;
@@ -41,22 +54,26 @@ header ul {
     padding-right: 50px;
 }
 
+/* type selector applying style to the li in the header section */
 header li {
     margin-left: 20px;
     margin-top: 10px;
 }
 
+/* type selector applying tyle to the a element in the header section */
 header li a {
-    color: #91CBCC;
+    color: var(--main-text-color);
     text-decoration: none;
     
 }
 
+/* pseudo class styling hovering behavior for links in the header section */
 header a:hover {
-    color: white;
+    color: var(--secondary-text-color);
     cursor: pointer;
 }
 
+/* media query styling the header in screens less than 730px wide */
 @media screen and (max-width: 730px) {
     header h1 {
         padding-left: 30px;
@@ -68,7 +85,7 @@ header a:hover {
 }
 
 
-
+/* media query styling the header in screens less than 677px wide */
 @media screen and (max-width: 677px) {
     header h1 {
         padding-left: 30px;
@@ -87,6 +104,7 @@ header a:hover {
 
 /* ------------------------ Hero ------------------------------------------------ */
 
+/* class selector styling the hero page */
 .hero {
     height: 200px;
     background-image: url(assets/hero-image2.webp);
@@ -96,75 +114,81 @@ header a:hover {
     width: 100%;
 }
 
+/* type selector styling the h2 in the hero page */
 .hero h2 {
     position: absolute;
     bottom: 0;
     right: 0;
     margin: 40px;
-    color: #91CBCC
+    color: var(--main-text-color);
 }
 
 /* ------------------------ main ------------------------------------------------ */
 
+/* element selector applying a margin right to the entire page content */
 main {
     margin-right: 20px;
 }
 /* ------------------------ sections ------------------------------------------------ */
 
+/* element selector styling every section and displayin it flex to create create the side section */
 section {
     display: flex;
     margin-right: 10%;
 }
 
+/* element selector styling the side cotaining the title for each section */
 section aside {
     flex: 1;
     margin-left: 25px;
     margin-right: 10px;
-    /* width: 20%; */
-    /* text-align: right; */
-    /* background-color: brown; */
     position: relative;
-    border-right: 2px solid #91CBCC ;
+    border-right: 2px solid var(--main-text-color); ;
     margin-top: 20px;
     display: flex;
     align-items: center;
-    color: #91CBCC;
+    color: var(--main-text-color);;
 }
 
-
+/* element selector styling the h2 in the aside element */
 aside h2 {
     position: absolute;
     right: 0;  
     padding-right: 20px;
 }
 
+/* class selector styling the containers which contains the sections to the right of each aside */
 .container {
     height: auto;
-    /* width: 100%; */
-    /* background-color: white; */
     flex: 5;
     margin-top: 20px;
     min-height: 150px;
 }
 
+/* media query styling the section in screens less than 600px wide */
 @media screen and (max-width: 600px) {
+    /* Displaying sections as block to position titles at the top of each section instead of to their left  */
     section {
         display: block;
     }
 
+    /* styling h2 container */
     section aside {
         height: 20px;   
         border-right: none; 
     }
 
+    /* styling h2 */
     aside h2 {
         left: 0;
     }
 
+    /* giving some margin between about me and hero section */
     .aboutMe {
         margin-top: 50px;
     }
 
+    /* aligning the ul to the h2 in the contact me section */
     .contactMe ul {
         margin-left: 10px;
     }
@@ -172,28 +196,27 @@ aside h2 {
 
 /* ------------------------ About me ------------------------------------------------ */
 
-.aboutMe aside {
-    /* background-color: pink; */
-    margin-top: 10;
-}
-
+/* positioning and styling article text */
 .aboutMe .container {
     margin-top: 0;
     text-align: justify;
 }
 
+/* type selector styling article */
 article {
     padding: 30px;
-    color: azure;
+    color: var(--secondary-text-color);
     font-size: 25px;
 }
 
+/* styling image in the article */
 .aboutMe img {
     width: 100px;
     float: left;
     margin: 0 25px 25px 0;
 }
 
+/* media query styling the about me section in screens less than 919px wide making content wider */
 @media screen and (max-width: 919px) {
     section {
         margin-right: 0;
@@ -202,15 +225,8 @@ article {
 
 
 /* ------------------------ Work ------------------------------------------------ */
-section .work {
-    display: block;
-}
 
-.work aside h2 {
-    position: absolute;
-    margin-top: none;
-}
-
+/* class selector styling the container which contains works deployed as flex and adjusting its spacing*/
 .work .container {
     display: flex;
     flex-wrap: wrap;
@@ -219,95 +235,78 @@ section .work {
     margin-top: 20px;
 }
 
+/* class selector styling main project */
 .work .mainProject {
     cursor: pointer;
     width: 90%;
     position: relative;
     height: 100%;
-    /* background-color: red; */
 }
 
+/* pseudo class styling hovering behavior for the image of the main project */
 .work .mainProject:hover {
     width: 100%;
     transition: .5s;
 }
 
+/* delimiting main image max size according to its parent container  */
 .work .mainProject img {
     width: 100%;
-    background-color: yellow;
-    bottom: 0;
-    position: relative;
 }
 
-
+/* class selector atributing size proportions to additional projects */
 .project {
     width: 40%;
     height: 100px;
     margin: 20px;
-    background-color: black;
     cursor: pointer;
 }
 
+/* pseudo class styling hovering behavior for the image of the additional projects */
 .project:hover {
     width: 43%;
     transition: .5s;
 }
 
-.work .container .mainProject div {
-    display: inline-block;
-    position: relative;
-    height: auto;
-    bottom: 75px;
-    left: 20px;
-    background-color:  #4d686d;
-    color: white;
-    font-size: 27px;
-    padding: 10px;
-}
-
-.work .container .mainProject div img {
-    width: 100%;
-}
-
+/* making title inside each project position relative to its parent container */
 .work .container .project {
     position: relative;
 }
 
+/* div inside each project containing the title of the project */
 .work .container .project div {
     display: inline;
     position: absolute;
     bottom: 5px;
     left: 5px;
     background-color:  #4d686d;
-    color: white;
+    color: var(--secondary-text-color);
     font-size: 17px;
     padding: 10px;
 }
 
-.work .container #mainProject {
-    /* background-image: url(assets/small_images/main_project.png); */
-    background-position: center;
-    background-size: cover;
-}
-
+/* inserting and configutring displaying properties for projects in work section */
 .work .container #git {
     background-image: url(assets/small_images/git.jpeg);
     background-position: center;
     background-size: cover;
 }
 
+/* inserting and configutring displaying properties for projects in work section */
 .work .container #runBuddy {
     background-image: url(assets/small_images/hero-bg.jpeg);
     background-size: cover;
     background-position: bottom;
 }
 
+/* inserting and configutring displaying properties for projects in work section */
 .work .container #horiseon {
     background-image: url(assets/small_images/digital-marketing-meeting.jpg);
     background-size: cover;
     background-position: center;
 }
 
+/* inserting and configutring displaying properties for projects in work section */
 .work .container #javascript {
     background-image: url(assets/small_images/java.jpeg);
     background-size: cover;
@@ -315,10 +314,8 @@ section .work {
     
 }
 
+/* media querry referencing to the work area in a smaller screen */
 @media screen and (max-width: 667px) {
-
-   
-   
     .project {
         width:90%;
     }
@@ -331,18 +328,19 @@ section .work {
     .work .project:hover {
         width: 90%;
     }
-    
 }
 
 
 
 /* ------------------------ Contact Me ------------------------------------------------ */
 
+/* Applying flex property to lay aside and main div side by side and alined center */
 .contactMe .container {
     display: flex;
     align-items: center;
 }
 
+/* styleing ul for the contact me section */
 .contactMe ul {
     list-style: none;
     display: flex;
@@ -350,18 +348,18 @@ section .work {
     
 }
 
+/* styling the li for the contact me section*/
 .contactMe li {
     margin: 20px;
-    color: azure;   
-    list-style: none;
 }
 
+/* styling the links for the contact me section */
 .contactMe a {
-    color: white;
+    color: var(--secondary-text-color);
     text-decoration: none;
 }
 
-
+/* media wuerry for smaller screen, displaying list as blocks */
 @media screen and (max-width: 836px) {
     .contactMe ul {
        display: block;
