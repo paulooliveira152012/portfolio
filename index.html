@@ -4,66 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Paulo's Portfolio</title>
   </head>
   <body>
     <header>
-      <h1>Paulo Oliveira</h1>
-      <ul>
-        <li>About Me</li>
-        <li>Work</li>
-        <li>Contact Me</li>
-        <li>Resume</li>
-      </ul>
+      <div>
+        <h1>Paulo Oliveira</h1>
+        <ul>
+          <li><a href="#aboutMe">About Me</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contactMe">Contact Me</a></li>
+          <li><a href="#">Resume</a></li>
+        </ul>
+      </div>
     </header>
 
     <section class="hero">
-      <h1>Cool Subtitle here</h1>
-    </section>
-
-    <section class="aboutMe">
-      <aside>
-        <h2>About Me</h2>
-      </aside>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-          veritatis debitis autem ipsa natus voluptatum aut velit? Sapiente,
-          est? In recusandae autem at velit officiis nostrum beatae eius eaque
-          atque.
-        </p>
-      </div>
-    </section>
-    <section class="work">
-      <aiside>
-        <h2>Work</h2>
-      </aiside>
-      <div>
-          <!--Content-->
-          <div class="mainProject"></div>
-          <div class="subProjects">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-          </div>
-      </div>
-    </section>
-    <section class="contactMe">
-      <aside>
-        <h2>Contact Me</h2>
-      </aside>
-      <div>
-         <ul>
-             <li>908-630-8458</li>
-             <li>paulooliveira152012@gmail.com</li>
-             <li>https://github.com/paulooliveira152012</li>
-         </ul>
-      </div>
+      <!-- <img src="assets/hero-image.jpeg" alt=""> -->
+      <h2>FULL STACK WEB DEVELOPER</h2>
     </section>
 
     <main>
-      <div></div>
+      <section class="aboutMe" id="aboutMe">
+        <!--Section containing al  "about me content"-->
+        <aside>
+          <h2>About Me</h2>
+        </aside>
+        <div class="container">
+          <article>
+            <img src="assets/IMG_1992.jpg" alt="">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+              veritatis debitis autem ipsa natus voluptatum aut velit? Sapiente,
+              est? In recusandae autem at velit officiis nostrum beatae eius
+              eaque atque. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Voluptate dolores rerum voluptates praesentium distinctio
+              sunt. Inventore beatae necessitatibus nobis facilis, officia quia
+              culpa ducimus asperiores veritatis illo ex dolor ut! Lorem ipsum
+              dolor sit, amet consectetur adipisicing elit. Sed, cum libero
+              optio dolor maxime officia nam tempora suscipit modi eaque nemo,
+              esse obcaecati, numquam facere itaque! Ab expedita odio magni.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores dignissimos possimus voluptas esse natus libero
+              quisquam iste nesciunt modi qui deserunt, numquam suscipit
+              cupiditate ipsam iusto non! Natus, excepturi quod.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="work" id="work">
+        <aside>
+          <h2>Work</h2>
+        </aside>
+        <div class="container">
+            
+              <div class="mainProject" id="mainProject"><img src="assets/small_images/main_project.png" alt=""></div>
+              <div class="project" id="git"></div>
+              <div class="project" id="runBuddy"></div>
+              <div class="project" id="horiseon"></div>
+              <div class="project" id="javascript"></div>
+            
+          </div>
+          <!-- <div class="project"></div> -->
+      </section>
+      <section class="contactMe" id="contactMe">
+        <aside>
+          <h2>Contact Me</h2>
+        </aside>
+        <div class="container">
+          <ul>
+            <li>123-456-7890</li>
+            <li>student@gmail.com</li>
+            <li>https://github.com/student</li>
+          </ul>
+        </div>
+      </section>
     </main>
   </body>
 </html>

@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #32353D;
+}
+
+header {
+    height: 70px;
+    background-color: #32353D;
+    position: relative;
+}
+
+header div {
+    /* background-color: blue; */
+    position: relative;
+    position: absolute;
+    width: 100%;
+    bottom: 25%;
+    
+}
+
+header h1 {
+    display: inline-block;
+    padding-left: 50px;
+    padding-right: 10px;
+    cursor: pointer;
+    background-color: #91CBCC;
+    color: #32353D;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    float: right;
+    padding-right: 50px;
+}
+
+header li {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+header li a {
+    color: #91CBCC;
+    text-decoration: none;
+    
+}
+
+header a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 730px) {
+    header h1 {
+        padding-left: 30px;
+        padding-right: 10px;
+    }
+    header ul {
+        padding-right: 20px;
+    }
+}
+
+
+
+@media screen and (max-width: 677px) {
+    header h1 {
+        padding-left: 30px;
+        padding-right: 10px;
+    }
+    header div {
+        bottom: 0;
+    }
+
+    header ul {
+        display: none;
+    }
+}
+
+
+
+/* ------------------------ Hero ------------------------------------------------ */
+
+.hero {
+    height: 200px;
+    background-image: url(assets/hero-image2.webp);
+    background-size: cover;  /*making the beckground image full width*/
+    background-position: center;
+    position: relative;
+    width: 100%;
+}
+
+.hero h2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 40px;
+    color: #91CBCC
+}
+
+/* ------------------------ main ------------------------------------------------ */
+
+main {
+    margin-right: 20px;
+}
+/* ------------------------ sections ------------------------------------------------ */
+
+section {
+    display: flex;
+    margin-right: 10%;
+}
+
+section aside {
+    flex: 1;
+    margin-left: 25px;
+    margin-right: 10px;
+    /* width: 20%; */
+    /* text-align: right; */
+    /* background-color: brown; */
+    position: relative;
+    border-right: 2px solid #91CBCC ;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    color: #91CBCC;
+}
+
+
+aside h2 {
+    position: absolute;
+    right: 0;  
+    padding-right: 20px;
+}
+
+.container {
+    height: auto;
+    /* width: 100%; */
+    /* background-color: white; */
+    flex: 5;
+    margin-top: 20px;
+    min-height: 150px;
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        display: block;
+    }
+
+    section aside {
+        height: 20px;   
+        border-right: none; 
+    }
+
+    aside h2 {
+        left: 0;
+    }
+
+    .aboutMe {
+        margin-top: 50px;
+    }
+
+    .contactMe ul {
+        margin-left: 10px;
+    }
+}
+
+/* ------------------------ About me ------------------------------------------------ */
+
+.aboutMe aside {
+    /* background-color: pink; */
+    margin-top: 0;
+}
+
+.aboutMe .container {
+    margin-top: 0;
+    text-align: justify;
+}
+
+article {
+    padding: 30px;
+    color: azure;
+    font-size: 25px;
+}
+
+.aboutMe img {
+    width: 100px;
+    float: left;
+    margin: 0 25px 25px 0;
+}
+
+@media screen and (max-width: 919px) {
+    section {
+        margin-right: 0;
+    }
+}
+
+/* ------------------------ Work ------------------------------------------------ */
+section .work {
+    display: block;
+}
+
+.work aside h2 {
+    position: absolute;
+    margin-top: none;
+}
+
+.work .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.work .mainProject {
+    cursor: pointer;
+    width: 90%;
+}
+
+.work .mainProject:hover {
+    width: 105%;
+    transition: .5s;
+}
+
+.work .mainProject img {
+    width: 100%;
+}
+
+
+
+.project {
+    width: 40%;
+    height: 100px;
+    margin: 20px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.project:hover {
+    width: 43%;
+    transition: .5s;
+}
+
+.work .container .mainProject div {
+    width: 300px;
+    height: auto;
+    bottom: 20px;
+    left: 20px;
+}
+
+.work .container .mainProject div img {
+    width: 100%;
+
+}
+
+.work .container .project div {
+    width: 300px;
+    height: auto;
+    bottom: 20px;
+    left: 20px;
+    background-color: red;
+}
+
+.work .container #mainProject {
+    /* background-image: url(assets/small_images/main_project.png); */
+    background-position: center;
+    background-size: cover;
+}
+
+.work .container #git {
+    background-image: url(assets/small_images/git.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.work .container #runBuddy {
+    background-image: url(assets/small_images/hero-bg.jpeg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.work .container #horiseon {
+    background-image: url(assets/small_images/digital-marketing-meeting.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.work .container #javascript {
+    background-image: url(assets/small_images/java.jpeg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+
+/* ------------------------ Contact Me ------------------------------------------------ */
+
+.contactMe .container {
+    display: flex;
+    align-items: center;
+}
+
+.contactMe ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+.contactMe li {
+    margin: 20px;
+    color: azure;   
+}
+
+@media screen and (max-width: 836px) {
+    .contactMe ul {
+       display: block;
+    }
+}
+
+
+
+
+
+/* I'm working on line "Work" section separating the divs, (line 170) */
