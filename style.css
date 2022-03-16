@@ -223,7 +223,7 @@ section .work {
 }
 
 .work .mainProject:hover {
-    width: 105%;
+    width: 100%;
     transition: .5s;
 }
 
@@ -255,7 +255,6 @@ section .work {
 
 .work .container .mainProject div img {
     width: 100%;
-
 }
 
 .work .container .project div {
@@ -298,12 +297,20 @@ section .work {
 }
 
 @media screen and (max-width: 667px) {
+
+   
+   
     .project {
-        width:100%;
+        width:90%;
     }
 
-    .project:hover {
-        width: 100%;
+    .work .mainProject:hover {
+        width: 90%;
+        transition: .5s;
+    }
+
+    .work .project:hover {
+        width: 90%;
     }
     
 }
