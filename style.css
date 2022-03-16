@@ -198,6 +198,7 @@ article {
     }
 }
 
+
 /* ------------------------ Work ------------------------------------------------ */
 section .work {
     display: block;
@@ -293,6 +294,17 @@ section .work {
     background-image: url(assets/small_images/java.jpeg);
     background-size: cover;
     background-position: center;
+    
+}
+
+@media screen and (max-width: 667px) {
+    .project {
+        width:100%;
+    }
+
+    .project:hover {
+        width: 100%;
+    }
     
 }
 
