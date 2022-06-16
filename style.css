@@ -305,8 +305,8 @@ article {
 }
 
 /* inserting and configutring displaying properties for projects in work section */
-.work .container #javascript {
-    background-image: url(assets/small_images/java.jpeg);
+.work .container #nee {
+    background-image: url(/assets/small_images/project2.jpeg);
     background-size: cover;
     background-position: center;
     
